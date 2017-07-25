@@ -1,0 +1,19 @@
+<h1>Welcome to your Pokedex</h1>
+
+<% @pokemons.each do |pokemon| %>
+
+  <h2><%= pokemon.name %></h2>
+  <p>Type: <%= pokemon.poke_type %></p>
+
+  <img src="<%= pokemon.img_url %>" alt="">
+  <p><a href="pokemons/<%= pokemon.id %>"><%=pokemon.name%>'s homepage</a></p>
+
+<% end %>
+
+<h3><a href="/pokemons/new">Add new Pokemon</a></h3>
+
+</form>
+
+<audio autoplay>
+  <source src="/sounds/pokemon-theme.mp3" type="audio/mp3">
+</audio>

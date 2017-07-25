@@ -1,0 +1,19 @@
+<div class="pokemon">
+  <h2>Pokemon Name: <%= @pokemon.name %></h2>
+  <p>Pokemon Type: <%= @pokemon.poke_type %></p>
+  <p>Combat Points (CP): <%= @pokemon.cp %></p>
+
+
+  <p><img src= <%= @pokemon.img_url %> alt="<%= @pokemon.name %>"</p>
+</div>
+
+  <a href="/pokemons/<%= @pokemon.id %>/edit">Edit Pokemon</a>
+  <a href="/pokemons">Go back to all Pokemons</a>
+
+</div>
+
+<h3>Kill this pokemon</h3>
+<form action="/pokemons/<%= @pokemon.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input class="button-delete" type="submit" name="" value="Kill!">
+</form>
