@@ -1,19 +1,19 @@
+<div class="poke-style">
 <h1>Welcome to your Pokedex</h1>
 
 <% @pokemons.each do |pokemon| %>
 
-  <h2><%= pokemon.name %></h2>
-  <p>Type: <%= pokemon.poke_type %></p>
-
-  <img src="<%= pokemon.img_url %>" alt="">
-  <p><a href="pokemons/<%= pokemon.id %>"><%=pokemon.name%>'s homepage</a></p>
+  <div class="poke-box">
+    <h2><a class="poke-name" href="pokemons/<%= pokemon.id %>"><%=pokemon.name%></a></h2>
+  <!-- <p>Type: <%= pokemon.poke_type %></p> -->
+    <img class="poke-img"src="<%= pokemon.img_url %>" alt="<%= pokemon.name %>" width="50px">
+  </div>
 
 <% end %>
 
 <h3><a href="/pokemons/new">Add new Pokemon</a></h3>
-
-</form>
-
-<audio autoplay>
+<h2><a href="/">Back Home</a></h2>
+<!-- <audio autoplay>
   <source src="/sounds/pokemon-theme.mp3" type="audio/mp3">
-</audio>
+</audio> -->
+</div>

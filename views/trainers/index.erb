@@ -1,5 +1,12 @@
-<h1>Current Trainers</h1>
+<div class="poke-style">
 
-<% @trainers.each do |trainer| %>
-  <p><%= trainer.name %></p>
-<% end %>
+  <h1>Current Trainers</h1>
+  <% @trainers.each do |trainer| %>
+    <p><a href="/trainers/<%= trainer.id %>"><%= trainer.name %></a></p>
+    <p>Spunk level: <%= trainer.spunk %></p>
+    <img src="<%= trainer.img_url %>" alt="<%= trainer.name %>" width="300px">
+  <% end %>
+  <p><a href="/trainers/new">Create New Trainer</a></p>
+  <p><a href="/">Back Home</a></p>
+  <p><a href="/pokemons">View All Pokemon</a></p>
+</div>

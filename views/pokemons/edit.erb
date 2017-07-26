@@ -1,6 +1,10 @@
+<div class="poke-style">
+
 <h2>Edit <%= @pokemon.name %></h2>
 
 <form action="/pokemons/<%= @pokemon.id %>" method="post">
+
+  <div class="poke-box-column">
 
   <input type="hidden" name ="_method" value="put">
 
@@ -13,6 +17,18 @@
   <label>Photo Url:</label>
   <input type="text" name="pokemon[img_url]" value="<%= @pokemon.img_url %>">
 
-  <input type="submit" value = "Update">
+  <select name="pokemon[trainer_id]">
+    <% @trainers.each do |trainer| %>
+      <option value="<%= trainer.id%>"><%= trainer.name %>
+      </option>
+    <% end %>
+  </select>
 
+  <input class="poke-button" type="submit" value = "Update">
+
+  </div>
 </form>
+
+<h3><a href="/pokemons">Back to Pokemon</a></h3>
+
+</div>

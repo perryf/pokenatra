@@ -1,6 +1,10 @@
+<div class="poke-style">
+
 <h2>Let's add a new Pokemon to your roster</h2>
 
 <form action="/pokemons" method="post">
+
+  <div class="poke-box-column">
 
   <label>Name:</label>
   <input type="text" name="pokemon[name]" placeholder="name">
@@ -11,6 +15,19 @@
   <label>Photo Url:</label>
   <input type="text" name="pokemon[img_url]" placeholder="photo url">
 
-  <input type="submit" value = "Create_new">
+  <label>Trainer:</label>
+  <select name="pokemon[trainer_id]">
+    <% @trainers.each do |trainer| %>
+      <option value="<%= trainer.id%>"><%= trainer.name %>
+      </option>
+    <% end %>
+  </select>
+
+  <input class="poke-button" type="submit" value = "Create new">
+
+  </div>
 
 </form>
+
+<h3><a href="/pokemons">Back to Pokemon</a></h3>
+</div>

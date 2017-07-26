@@ -23,6 +23,7 @@ GEM
     multi_json (1.12.1)
     mustermann (1.0.0)
     pg (0.21.0)
+    pokemon_faker (0.1.2)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -55,6 +56,7 @@ DEPENDENCIES
   activerecord
   ffaker
   pg
+  pokemon_faker (~> 0.1.2)
   pry
   sinatra
   sinatra-contrib

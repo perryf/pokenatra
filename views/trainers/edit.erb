@@ -1,0 +1,27 @@
+<div class="poke-style">
+
+<h2>Edit <%= @trainer.name %></h2>
+
+<form action="/trainers/<%= @trainer.id %>" method="post">
+
+  <div class="poke-box-column">
+
+  <input type="hidden" name ="_method" value="put">
+
+  <label>Name:</label>
+  <input type="text" name="trainer[name]" value="<%= @trainer.name %>">
+
+  <label>Spunk: </label>
+  <input type="text" name="trainer[spunk]" value = "<%= @trainer.spunk %>">
+
+  <label>Photo Url:</label>
+  <input type="text" name="trainer[img_url]" value="<%= @trainer.img_url %>">
+
+  <input class="poke-button" type="submit" value = "Update">
+
+  </div>
+</form>
+
+<h3><a href="/trainers">Back to Trainers</a></h3>
+
+</div>

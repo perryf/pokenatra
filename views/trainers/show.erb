@@ -1,0 +1,21 @@
+<div class="poke-style">
+
+<h2>Hi, I'm <%= @trainer.name %>!</h2>
+<h3>Spunk level: <%= @trainer.spunk %></h3>
+<img src="<%= @trainer.img_url %>" alt="<%= @trainer.name %>" width="500px">
+
+<p>Current Pokemon:</p>
+<% @trainer.pokemon.each do |i| %>
+  <p><a href="/pokemons/<%= i.id %>"><%= i.name %> <img src="<%= i.img_url %>" alt="<%= i.name %>" width="100px"></a></p>
+<% end %>
+
+<p><a href="/trainers/<%= @trainer.id %>/edit">Edit Trainer</a></p>
+<p><a href="/trainers">Back to Trainers</a></p>
+<p><a href="/">Back Home</a></p>
+
+<form action="/trainers/<%= @trainer.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input class="poke-button" type="submit" name="" value="Kill this Trainer!">
+</form>
+
+</div>

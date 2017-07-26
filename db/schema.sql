@@ -14,5 +14,5 @@ CREATE TABLE pokemons (
   poke_type VARCHAR(255),
   cp INTEGER,
   img_url VARCHAR(255),
-  trainer_id INTEGER
+  trainer_id INTEGER REFERENCES trainers(id)
 );
