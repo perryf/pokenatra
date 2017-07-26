@@ -2,6 +2,7 @@
 
 <h2>Hi, I'm <%= @trainer.name %>!</h2>
 <h3>Spunk level: <%= @trainer.spunk %></h3>
+<h3><a href="/teams">Team <%= @trainer.team.name %></a></h3>
 <img src="<%= @trainer.img_url %>" alt="<%= @trainer.name %>" width="500px">
 
 <p>Current Pokemon:</p>

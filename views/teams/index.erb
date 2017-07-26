@@ -1,0 +1,11 @@
+<div class="poke-style">
+
+  <h1>Current teams</h1>
+  <% @teams.each do |team| %>
+    <p><a href="/teams/<%= team.id %>"><%= team.name %></a></p>
+    <img src="<%= team.img_url %>" alt="<%= team.name %>" width="300px">
+  <% end %>
+  <p><a href="/teams/new">Create New team</a></p>
+  <p><a href="/">Back Home</a></p>
+  <p><a href="/trainers">View All Trainers</a></p>
+</div>

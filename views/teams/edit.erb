@@ -1,0 +1,24 @@
+<div class="poke-style">
+
+<h2>Edit <%= @team.name %></h2>
+
+<form action="/teams/<%= @team.id %>" method="post">
+
+  <div class="poke-box-column">
+
+  <input type="hidden" name ="_method" value="put">
+
+  <label>Name:</label>
+  <input type="text" name="team[name]" value="<%= @team.name %>">
+
+  <label>Photo Url:</label>
+  <input type="text" name="team[img_url]" value="<%= @team.img_url %>">
+
+  <input class="poke-button" type="submit" value = "Update">
+
+  </div>
+</form>
+
+<h3><a href="/teams">Back to teams</a></h3>
+
+</div>

@@ -1,0 +1,20 @@
+<div class="poke-style">
+
+<h2><%= @team.name %></h2>
+<img src="<%= @team.img_url %>" alt="<%= @team.name %>" width="500px">
+
+<p>Current Trainers:</p>
+<% @team.trainers.each do |i| %>
+  <p><a href="/trainers/<%= i.id %>"><%= i.name %> <img src="<%= i.img_url %>" alt="<%= i.name %>" width="100px"></a></p>
+<% end %>
+
+<p><a href="/teams/<%= @team.id %>/edit">Edit team</a></p>
+<p><a href="/teams">Back to teams</a></p>
+<p><a href="/">Back Home</a></p>
+
+<form action="/teams/<%= @team.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input class="poke-button" type="submit" name="" value="Kill this team!">
+</form>
+
+</div>
